@@ -12,7 +12,7 @@ namespace VSTestCode
         {
             if (!map.OnMap(this))
             {
-                throw new Exception(x + "," + y + " is outside the map.");
+                throw new OutOfBoundsException(x + "," + y + " is outside the map.");
             }
         }
     }

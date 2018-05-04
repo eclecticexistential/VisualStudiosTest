@@ -16,9 +16,17 @@ namespace VSTestCode
             {
                 MapLocation mapLocation = new MapLocation(20, 20, map);
             }
-            catch (Exception ex)
+            catch (OutOfBoundsException ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+            catch(ProgramExceptions)
+            {
+                Console.WriteLine("unhandled program exception here.");
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Unhandled Exception");
             }
         }
     }

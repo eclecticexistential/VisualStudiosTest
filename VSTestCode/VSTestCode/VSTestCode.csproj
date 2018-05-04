@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classy.cs" />
+    <Compile Include="Exceptions.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="MapLocation.cs" />
     <Compile Include="Path.cs" />
