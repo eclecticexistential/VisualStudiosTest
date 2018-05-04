@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace VSTestCode
 {
-    class MapLocation
+    class MapLocation : Point //subclass / inheritance
     {
+        public MapLocation(int x, int y) : base(x, y)
+        {
+
+        }
     }
 }
