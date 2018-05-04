@@ -8,6 +8,6 @@ namespace VSTestCode
 {
     class Invader
     {
-        public string Person { get; set; }
+        public MapLocation Location { get; private set; }
     }
 }
