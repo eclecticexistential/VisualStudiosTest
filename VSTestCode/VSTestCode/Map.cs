@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace VSTestCode
 {
-    class Invader
+    class Map
     {
-        public string Person { get; set; }
+        public int Width;
+        public int Height;
     }
 }

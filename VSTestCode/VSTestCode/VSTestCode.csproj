@@ -43,8 +43,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classy.cs" />
+    <Compile Include="Map.cs" />
+    <Compile Include="Path.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="towerdefense.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

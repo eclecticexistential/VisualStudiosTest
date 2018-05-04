@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace VSTestCode
 {
-    class Invader
+    class Path
     {
-        public string Person { get; set; }
     }
 }
