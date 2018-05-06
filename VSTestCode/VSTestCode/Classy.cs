@@ -12,7 +12,6 @@ namespace VSTestCode
         private int _pathStep = 0;
         public MapLocation Location => _path.GetLocationAt(_pathStep);
 
-
         public int Health { get; private set; } = 2;
 
         public bool HasScored { get { return _pathStep >= _path.Length; } }
