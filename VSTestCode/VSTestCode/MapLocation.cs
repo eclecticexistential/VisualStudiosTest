@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace VSTestCode
+﻿namespace VSTestCode
 {
     class MapLocation : Point //subclass / inheritance
     {
@@ -12,7 +6,7 @@ namespace VSTestCode
         {
             if (!map.OnMap(this))
             {
-                throw new OutOfBoundsException(x + "," + y + " is outside the map.");
+                throw new OutOfBoundsException(this + " is outside the map.");
             }
         }
         public bool InRangeOf(MapLocation location, int range)

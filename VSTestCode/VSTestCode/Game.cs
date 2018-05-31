@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace VSTestCode
 {
     class Game
     {
+
         public static void Main()
         {
             Map map = new Map(8, 5);
@@ -23,40 +20,46 @@ namespace VSTestCode
                     new MapLocation(5, 2, map),
                     new MapLocation(6, 2, map),
                     new MapLocation(7, 2, map),
-                });
+                }
+                    );
 
-                Invader[] invaders =
+                IInvader[] invaders =
                 {
-                    new Invader(path),
-                    new Invader(path),
-                    new Invader(path),
-                    new Invader(path),
+                    new ShieldedInvader(path),
+                    new FastInvader(path),
+                    new StrongInvader(path),
+                    new BasicInvader(path),
+                    new ResurrectingInvader(path)
                 };
                 Tower[] towers =
                 {
-                    new Tower(new MapLocation(1,3, map)),
+                    new SniperTower(new MapLocation(1,3, map)),
                     new Tower(new MapLocation(3,3, map)),
-                    new Tower(new MapLocation(5,3, map)),
+                    new Tower(new MapLocation(5,3, map))
                 };
-                Level level = new Level(invaders);
+                Level level = new Level(invaders)
                 {
-                    Towers = towers;
+                    Towers = towers
                 };
                 bool playerWon = level.Play();
 
                 Console.WriteLine("Player " + (playerWon? "won" : "lost"));
+                Console.ReadLine();
             }
             catch (OutOfBoundsException ex)
             {
                 Console.WriteLine(ex.Message);
+                Console.ReadLine();
             }
             catch(ProgramExceptions)
             {
                 Console.WriteLine("unhandled program exception here.");
+                Console.ReadLine();
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unhandled Exception: " + ex);
+                Console.ReadLine();
             }
         }
     }
